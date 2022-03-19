@@ -11,10 +11,8 @@ inputBox.onkeyup = () => {
   // the values aren't space
   if (userEnteredValue.trim() != 0) {
     addBtn.classList.add("active");
-    saveBtn.classList.add("active");
   } else {
     addBtn.classList.remove("active");
-    saveBtn.classList.remove("active");
   }
 };
 
@@ -32,6 +30,10 @@ addBtn.addEventListener("click", () => {
   }
 
   //   Check input value for input field
+  if (userEnterValue == 0) {
+    alert("Please, Fill out your task!!!");
+    return;
+  }
   listArray.push(userEnterValue);
   console.log(listArray);
   localStorage.setItem("Newtodo", JSON.stringify(listArray));

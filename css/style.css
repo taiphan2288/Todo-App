@@ -67,8 +67,8 @@ body {
 .inputField .saveBtn {
   display: block;
   background-color: #6495ed;
-  /* opacity: 0.6;
-  pointer-events: none; */
+  opacity: 1;
+  /* pointer-events: none; */
 }
 
 .todoList {
